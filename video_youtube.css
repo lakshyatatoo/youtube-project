@@ -51,12 +51,12 @@
   row-gap: 40px;
 }
 /* css inside media wil ativatewen screen size is less than equal to width or height max */
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .video-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
-  @media (min-width: 751px) and(max-width:999px) {
+  @media (min-width: 701px) and(max-width:999px) {
     .video-grid {
       grid-template-columns: 1fr 1fr 1fr;
     }
