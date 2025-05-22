@@ -1,5 +1,6 @@
 .sidebar {
   background-color: white;
+
   position: fixed;
   left: 0;
   bottom: 0;
@@ -27,23 +28,4 @@
 }
 .ytmusic {
   font-size: 11px;
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  .sidebar {
-    width: 60px;
-    top: 60px;
-  }
-  .sidebar-link {
-    height: 60px;
-    font-size: 10px;
-  }
-  .sidebar-link img {
-    height: 22px;
-    margin-bottom: 2px;
-  }
-  .ytmusic {
-    font-size: 9px;
-  }
 }
