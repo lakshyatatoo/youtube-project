@@ -1,14 +1,12 @@
 .header {
   height: 60px;
   display: flex;
-
   justify-content: space-between;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   background-color: white;
-  /* can be applied for pading and border margin all */
   border-bottom: 1px solid rgb(189, 189, 189);
   z-index: 90;
 }
@@ -49,7 +47,6 @@
   height: 39px;
   width: 66px;
   background-color: rgb(244, 243, 243);
-
   border: 1px solid rgb(183, 182, 182);
 }
 .search-button,
@@ -82,7 +79,6 @@
   white-space: nowrap;
   font-family: Roboto, Arial;
 }
-/* target tooltip when hover over button */
 .search-button:hover .tooltip,
 .voice-button:hover .tooltip,
 .upload-tip:hover .tooltip,
@@ -115,7 +111,6 @@
   border: 1px solid rgb(183, 182, 182);
   box-shadow: inset 1px 1px 5px rgb(0, 0, 0, 0.15);
   width: 0;
-  /* flex-shrink: 0; */
 }
 
 .search-bar::placeholder {
@@ -156,4 +151,51 @@
   padding: 1px 5px;
   border-radius: 100%;
   border: 1px solid white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .left-section {
+    width: 150px;
+  }
+  .youtube-logo {
+    margin-right: 0;
+  }
+  .middle-section {
+    max-width: 50%;
+  }
+  .right-section {
+    width: 150px;
+    gap: 5px;
+  }
+  .search-bar {
+    font-size: 14px;
+  }
+  .search-bar::placeholder {
+    font-size: 14px;
+  }
+  .search-button {
+    width: 50px;
+    height: 36px;
+  }
+  .search-icon {
+    height: 25px;
+  }
+  .voice-button {
+    width: 40px;
+    height: 36px;
+  }
+  .voice-icon {
+    height: 20px;
+  }
+  .upload-icon,
+  .apps-icon,
+  .notibell-icon {
+    height: 20px;
+    margin-right: 8px;
+  }
+  .account-icon {
+    height: 28px;
+    margin-right: 15px;
+  }
 }
