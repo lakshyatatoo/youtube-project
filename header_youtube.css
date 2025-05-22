@@ -1,31 +1,159 @@
-.sidebar {
-  background-color: white;
-
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  top: 56px;
-  width: 75px;
-  z-index: 200;
-  padding-top: 5px;
-  cursor: pointer;
-}
-.sidebar-link {
-  height: 75px;
-  margin-bottom: 1px;
+.header {
+  height: 60px;
   display: flex;
-  flex-direction: column;
+
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  /* can be applied for pading and border margin all */
+  border-bottom: 1px solid rgb(189, 189, 189);
+  z-index: 90;
+}
+
+.left-section {
   align-items: center;
+  display: flex;
+  width: 220px;
+}
+
+.middle-section {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.right-section {
+  width: 200px;
+  align-items: center;
+  display: flex;
+  justify-content: end;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.hamburger-menu {
+  margin-left: 22px;
+  margin-right: 22px;
+  height: 27px;
+}
+.youtube-logo {
+  height: 20px;
+  margin-right: 200px;
+}
+
+.search-button {
+  height: 39px;
+  width: 66px;
+  background-color: rgb(244, 243, 243);
+
+  border: 1px solid rgb(183, 182, 182);
+}
+.search-button,
+.voice-button,
+.account-tip,
+.apps-tip,
+.noticontainer,
+.upload-tip {
+  position: relative;
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+.search-button .tooltip,
+.voice-button .tooltip,
+.upload-tip .tooltip,
+.apps-tip .tooltip,
+.noticontainer .tooltip,
+.account-tip .tooltip {
+  position: absolute;
+  background-color: gray;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  border-radius: 2px;
   font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: Roboto, Arial;
 }
-.sidebar-link:hover {
-  background-color: rgb(230, 230, 230);
+/* target tooltip when hover over button */
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip,
+.upload-tip:hover .tooltip,
+.apps-tip:hover .tooltip,
+.noticontainer:hover .tooltip,
+.account-tip:hover .tooltip {
+  opacity: 1;
 }
-.sidebar-link img {
-  height: 26px;
-  margin-bottom: 3px;
+.voice-button {
+  height: 35px;
+  width: 60px;
+  border: none;
+  background-color: white;
 }
-.ytmusic {
-  font-size: 11px;
+.voice-icon {
+  height: 23px;
+  background-color: rgb(246, 246, 246);
+  border-radius: 20px;
+  padding: 6px 6px 6px 6px;
+}
+.search-icon {
+  height: 30px;
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(183, 182, 182);
+  box-shadow: inset 1px 1px 5px rgb(0, 0, 0, 0.15);
+  width: 0;
+  /* flex-shrink: 0; */
+}
+
+.search-bar::placeholder {
+  font-size: 16px;
+}
+
+.upload-icon {
+  height: 25px;
+  margin-right: 13px;
+}
+.apps-icon {
+  height: 25px;
+  margin-right: 13px;
+}
+
+.notibell-icon {
+  height: 25px;
+  margin-right: 13px;
+}
+
+.account-icon {
+  height: 33px;
+  margin-right: 25px;
+  border-radius: 20px;
+}
+
+.noticontainer {
+  position: relative;
+}
+.noticount {
+  font-family: Roboto, Arial;
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  font-size: 12px;
+  background-color: red;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 100%;
+  border: 1px solid white;
 }
