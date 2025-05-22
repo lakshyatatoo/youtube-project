@@ -44,23 +44,23 @@
 }
 
 .video-grid {
-  /* text-decoration: underline;inherittance most text properties*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 16px;
   row-gap: 40px;
 }
-/* css inside media wil ativatewen screen size is less than equal to width or height max */
-@media (max-width: 700px) {
+
+@media (max-width: 750px) {
   .video-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
-  @media (min-width: 701px) and(max-width:999px) {
-    .video-grid {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
+}
 
 @media (min-width: 1000px) {
   .video-grid {
@@ -126,4 +126,43 @@
   border-radius: 50px;
   margin-top: 10px;
   margin-left: 2px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .video-grid {
+    column-gap: 10px;
+    row-gap: 30px;
+  }
+  .videotitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .video-author {
+    font-size: 11px;
+  }
+  .video-stats {
+    font-size: 11px;
+  }
+  .video-time {
+    font-size: 8px;
+    padding: 2px 2px 3px 2px;
+  }
+  .profile-picture {
+    width: 30px;
+  }
+  .video-info-grid {
+    grid-template-columns: 40px 1fr;
+  }
+  .channel-picture .tooltip {
+    width: 150px;
+    height: 50px;
+  }
+  .tooltip-pp {
+    height: 30px;
+  }
+  .tooltip-text-pp {
+    margin: 15px 0 15px 8px;
+    font-size: 12px;
+  }
 }
