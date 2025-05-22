@@ -3,14 +3,7 @@
   margin-bottom: 0;
 }
 body {
-  font-family: Roboto, Arial;
+  font-family: Roboto, arial;
   margin: 0;
   padding: 80px 25px 25px 95px;
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  body {
-    padding: 70px 15px 15px 70px;
-  }
 }
