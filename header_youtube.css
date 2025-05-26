@@ -1,0 +1,183 @@
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  border-bottom: 1px solid rgb(189, 189, 189);
+  z-index: 90;
+  align-items: center;
+}
+
+.left-section {
+  align-items: center;
+  display: flex;
+  width: 21em;
+  gap: 1.3em;
+}
+.hamburger-menu {
+  height: 1.7em;
+  margin-left: 1.4em;
+}
+.youtube-logo {
+  height: 1.3em;
+}
+
+.middle-section {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  height: 2.5em;
+  max-width: 22em;
+  min-width: 1em;
+
+  font-size: 1em;
+  border: 1px solid rgb(183, 182, 182);
+  box-shadow: inset 1px 1px 5px rgb(0, 0, 0, 0.15);
+  margin-left: 4em;
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.search-bar::placeholder {
+  font-size: 1em;
+  padding-left: 0.5em;
+}
+.search-icon {
+  height: 1.8em;
+}
+
+.search-button {
+  height: 3em;
+  width: 5em;
+
+  background-color: rgb(244, 243, 243);
+  border: 1px solid rgb(183, 182, 182);
+}
+.voice-button {
+  height: 3em;
+
+  border: none;
+  background-color: white;
+}
+.voice-icon {
+  height: 2.8em;
+  background-color: rgb(246, 246, 246);
+  border-radius: 20px;
+  padding: 6px 6px 6px 6px;
+}
+
+.right-section {
+  width: 13em;
+  align-items: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 1.4em;
+}
+
+.upload-icon {
+  height: 1.6em;
+}
+.apps-icon {
+  height: 1.6em;
+}
+
+.notibell-icon {
+  height: 1.6em;
+}
+
+.account-icon {
+  height: 2.1em;
+  margin-right: 1.6em;
+  border-radius: 20px;
+}
+
+.noticontainer {
+  position: relative;
+}
+.noticount {
+  font-family: Roboto, Arial;
+  position: absolute;
+  top: -2px;
+  right: -0.35em;
+  font-size: 0.75em;
+  background-color: red;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+.extra-account {
+  display: none;
+}
+
+.search-button,
+.voice-button,
+.account-tip,
+.apps-tip,
+.noticontainer,
+.upload-tip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-button .tooltip,
+.voice-button .tooltip,
+.upload-tip .tooltip,
+.apps-tip .tooltip,
+.noticontainer .tooltip,
+.account-tip .tooltip {
+  position: absolute;
+  background-color: gray;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  border-radius: 2px;
+  font-size: 0.8em;
+  bottom: -2em;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: Roboto, Arial;
+}
+/* target tooltip when hover over button */
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip,
+.upload-tip:hover .tooltip,
+.apps-tip:hover .tooltip,
+.noticontainer:hover .tooltip,
+.account-tip:hover .tooltip {
+  opacity: 1;
+}
+
+@media (max-width: 650px) {
+  .right-section,
+  .middle-section {
+    display: none;
+  }
+  .header {
+    position: fixed;
+    padding: 0 10px 0 10px;
+  }
+  .extra-account {
+    display: block;
+    margin-right: 0;
+  }
+  .account-extra {
+    height: 2.1em;
+    border-radius: 100%;
+  }
+  .hamburger-menu {
+    margin-left: 0;
+  }
+}
